@@ -113,5 +113,63 @@ float moneyDeposit(float balance) {
     printf("\n****YOUR CURRENT BALANCE IS:   Rs %.2f\n\n", balance);
     return balance;
 }
+//function to withdraw money
+float moneyWithdraw(float balance) {
+    int withdraw;
+    bool back = true;
+
+    printf("YOU CHOOSE TO WITHDRAW MONEY\n");
+    printf("$$$ YOUR BALANCE IS: Rs %.2f\n\n", balance);
+
+    while (back) {
+    printf("ENTER YOUR AMOUNT TO WITHDRAW:\n");
+    scanf("%f", &withdraw);
+
+    if(withdraw%100 !=0)
+    {
+        printf("\n ***PLEASE ENTER AMOUNT IN MULTIPLES OF 100***\n");
+        printf("YOUR AVAILABLE BALANCE IS:  Rs %.2f\n\n",balance);
+    }
+
+    else if(withdraw >(balance- 500.00))
+    {
+        printf("+++YOU DONT HAVE ENOUGH MONEY+++\n");
+        printf("PLEASE CONTACT TO YOUR BANK CUSTOMER SERVICES\n");
+        printf("****YOUR BALANCE IS:   Rs %.2f\n\n", balance);
+
+    }
+
+
+    else
+    {
+        balance = balance-withdraw;
+        printf("***PLEASE COLLECT CASH***");
+        printf("\n$$$$YOUR WITHDRAWING AMOUNT IS:  Rs %.2f\n", withdraw);
+        printf("****YOUR CURRENT BALANCE IS:   Rs %.2f\n\n", balance);
+
+    }
+}
+    return balance;
+
+
+}
+
+//function to quit transcation
+void menuExit() {
+    printf("--------------TAKE YOUR RECEIPT!!!------------------\n");
+    printf("-----THANK YOU FOR USING ATM BANKING MACHINE!!!-----\n");
+
+
+
+}
+
+//Function to display error message
+void errorMessage() {
+    printf("+++!!!YOU SELECTED INVALID CHOICE!!!+++\n");
+}
+
+
+
+
 
 
