@@ -14,3 +14,66 @@ float moneyWithdraw(float balance);
 void menuExit();
 void errorMessage();
 
+//Main Code
+int main() {
+    //Local Declarations
+    int choice,i;
+    float balance =15000.00;
+    int choose;
+    char username[20],password[20],ch;
+
+
+    bool transaction = true;
+
+    while (transaction) {
+    mainMenu();
+
+    printf("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n");
+    printf("ENTER YOUR CHOICE:\t");
+    scanf("%d", &choice);
+
+    // various options using switch case
+        switch (choice) {
+            case 1:
+            	system("CLS");
+                checkBalance(balance);
+                break;
+            case 2:
+            	system("CLS");
+                balance = moneyDeposit(balance);
+                break;
+            case 3:
+            	system("CLS");
+                balance = moneyWithdraw(balance);
+                break;
+
+            case 4:
+            	system("CLS");
+                menuExit();
+                return 0;
+
+            default:
+                errorMessage();
+                break;
+        }
+
+        printf("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
+        printf("DO YOU WISH TO HAVE ANOTHER TRANSACTION:\n");
+        printf("< 1 > Yes\n");
+        printf("< 2 > No\n");
+        scanf("%d", &choose);
+
+        system("CLS");
+
+
+
+        if (choose == 2) {
+            transaction = false;
+            menuExit();
+
+        }
+
+}
+
+    return 0;
+
