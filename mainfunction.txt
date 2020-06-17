@@ -78,7 +78,7 @@ int main() {
     return 0;
     
    //Functions definition
-//Function to dispaly mainMenu
+//Function to display mainMenu
 
 void mainMenu() {
 
