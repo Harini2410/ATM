@@ -22,7 +22,7 @@ int main() {
     int choose;
     
      //login
-    while(pin!=1111)
+    while(pin!=216)
     {
         printf("ENTER YOUR SECRET PIN NUMBER :\n");
         scanf("%d",&pin);
@@ -137,7 +137,7 @@ float moneyWithdraw(float balance) {
 
     while (back) {
     printf("ENTER YOUR AMOUNT TO WITHDRAW:\n");
-    scanf("%f", &withdraw);
+    scanf("%d", &withdraw);
 
     if(withdraw%100 !=0)
     {
@@ -156,9 +156,10 @@ float moneyWithdraw(float balance) {
 
     else
     {
+        back=false;
         balance = balance-withdraw;
         printf("***PLEASE COLLECT CASH***");
-        printf("\n$$$$YOUR WITHDRAWING AMOUNT IS:  Rs %.2f\n", withdraw);
+        printf("\n$$$$YOUR WITHDRAWING AMOUNT IS:  Rs %d \n", withdraw);
         printf("****YOUR CURRENT BALANCE IS:   Rs %.2f\n\n", balance);
 
     }
