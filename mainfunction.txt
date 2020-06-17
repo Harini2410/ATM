@@ -17,12 +17,26 @@ void errorMessage();
 //Main Code
 int main() {
     //Local Declarations
-    int choice,i;
+    int choice,pin;
     float balance =15000.00;
     int choose;
-    char username[20],password[20],ch;
+    
+     //login
+    while(pin!=1111)
+    {
+        printf("ENTER YOUR SECRET PIN NUMBER :\n");
+        scanf("%d",&pin);
+        system("CLS");
 
+        //password verification under process
+        if(pin!=1111)
+        {
+           printf("PLEASE ENTER VALID PASSWORD !! \n\n");
+        }
 
+    }
+
+    
     bool transaction = true;
 
     while (transaction) {
