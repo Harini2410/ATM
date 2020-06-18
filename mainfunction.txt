@@ -29,7 +29,7 @@ int main() {
         system("CLS");
 
         //password verification under process
-        if(pin!=1111)
+        if(pin!=216)
         {
            printf("PLEASE ENTER VALID PASSWORD !! \n\n");
         }
