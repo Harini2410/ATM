@@ -90,6 +90,7 @@ int main() {
 }
 
     return 0;
+}
     
    //Functions definition
 //Function to display mainMenu
@@ -107,7 +108,8 @@ void mainMenu() {
 }
 
 //function to check balance of user
-void checkBalance(float balance) {
+void checkBalance(float balance) 
+{
     printf("YOU CHOOSE TO SEE YOUR BALANCE\n\n");
     printf("\n\n****YOUR AVAILABLE BALANCE IS:   Rs %.2f\n\n", balance);
 
